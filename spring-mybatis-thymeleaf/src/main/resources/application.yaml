@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: init_prj
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/board_db?characterEncoding=utf-8
+    username : root
+    password: 123456
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
