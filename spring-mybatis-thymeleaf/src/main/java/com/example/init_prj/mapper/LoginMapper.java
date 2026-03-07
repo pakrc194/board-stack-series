@@ -11,6 +11,6 @@ import java.util.List;
 @Mapper
 public interface LoginMapper {
 
-    @Select("select * from notice where uid = #{uid} and pw = #{pw}")
+    @Select("select * from user where uid = #{uid} and pw = #{pw}")
     List<LoginDTO> login(String uid, String pw);
 }
