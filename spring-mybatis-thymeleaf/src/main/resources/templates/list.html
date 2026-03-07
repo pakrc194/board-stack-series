@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>List</title>
 </head>
 <body>
 <h2>게시글 목록</h2>
@@ -20,13 +20,19 @@
     <tr th:each="board : ${boardList}">
         <td th:text="${board.id}">1</td>
         <td>
-            <span th:text="${board.title}">제목</span>
+            <a th:href="@{/board/detail/{id}(id=${board.id})}"><span th:text="${board.title}">제목</span></a>
             <span th:if="${board.fileName != null and board.fileName != ''}"
                   title="첨부파일 있음"
                   style="margin-left: 5px; color: #3498db;">📎</span>
         </td>
         <td th:text="${board.content}">내용</td>
         <td th:text="${board.createdAt}">2026-02-10</td>
+    </tr>
+    <tr>
+        <td colspan="4" align="right">
+            <a href="/">홈</a>
+            <a href="/board/insert">글쓰기</a>
+        </td>
     </tr>
     </tbody>
 </table>

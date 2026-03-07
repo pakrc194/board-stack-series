@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>insert</title>
+</head>
+<body>
+<h2>게시글 쓰기</h2>
+<form action="/board/insert" method="post" enctype="multipart/form-data">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>제목</th>
+            <td>
+                <input type="text" name="title" placeholder="제목을 입력하세요"/>
+            </td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>
+                <input type="text" name="content" placeholder="내용을 입력하세요"/>
+            </td>
+        </tr>
+        <tr>
+            <th>첨부파일</th>
+            <td>
+                <input type="file" name="file"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <a href="/board/list">취소</a>
+                <input type="submit" value="등록">
+            </td>
+        </tr>
+        </thead>
+    </table>
+</form>
+</body>
+</html>

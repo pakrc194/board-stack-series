@@ -16,4 +16,5 @@ public class BoardService {
     public List<BoardDTO> boardList() {
         return mapper.list();
     }
+    public BoardDTO boardDetail(int id) {return mapper.detail(id);}
 }
