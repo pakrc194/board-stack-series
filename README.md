@@ -11,8 +11,8 @@
 
 | 순서 | 기술 스택 (BE / DB / View) | 핵심 키워드 | 상태 |
 |:---:|:---|:---|:---:|
-| 01 | Spring Boot + MyBatis + Thymeleaf | SQL Mapper, XML | Upcoming |
-| 02 | Spring Boot + JPA + Thymeleaf | ORM, Entity, QueryDSL | Upcoming |
+| 01 | Spring Boot + MyBatis + Thymeleaf | SQL Mapper, XML | Completed |
+| 02 | Spring Boot + JPA + Thymeleaf | ORM, Entity, QueryDSL | In Progress |
 | 03 | Python (FastAPI) + MongoDB | NoSQL, Asynchronous | Upcoming |
 
 ---
