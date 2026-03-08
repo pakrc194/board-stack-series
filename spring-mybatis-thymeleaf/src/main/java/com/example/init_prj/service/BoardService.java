@@ -17,4 +17,13 @@ public class BoardService {
         return mapper.list();
     }
     public BoardDTO boardDetail(int id) {return mapper.detail(id);}
+    public int boardInsert(BoardDTO board) {
+        return mapper.insert(board);
+    }
+    public int boardDelete(int id) {
+        return mapper.delete(id);
+    }
+    public int boardModify(BoardDTO board) {
+        return mapper.modify(board);
+    }
 }

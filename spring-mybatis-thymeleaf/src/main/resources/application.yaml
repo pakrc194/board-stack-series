@@ -10,6 +10,9 @@ spring:
     username : root
     password: 123456
 
+file:
+  upload:
+    path: C:/uploads/
 
 mybatis:
   configuration:
