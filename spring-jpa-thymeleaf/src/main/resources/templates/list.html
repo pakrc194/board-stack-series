@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+</head>
+<body>
+<h2>게시글 목록</h2>
+<table border="1">
+  <thead>
+  <tr>
+    <th>번호</th><th>제목</th><th>작성일</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="board, idx : ${boardList}">
+    <td th:text="${idx.count}"></td>
+    <td>
+      <a th:href="@{/board/detail/{id}(id=${board.id})}" th:text="${board.title}"></a>
+      <span th:if="${board.fileName != null and board.fileName != ''}">📎</span>
+    </td>
+    <td th:text="${#temporals.format(board.createdAt, 'yyyy-MM-dd')}"></td>
+  </tr>
+  </tbody>
+</table>
+<a href="/board/insert">글쓰기</a>
+</body>
+</html>
